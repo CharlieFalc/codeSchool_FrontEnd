@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- np-app: attaches the Application module to the page -->
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <!-- ng-controller: attaches the controller function to the page -->
+  <body class="container" ng-controller="StoreController as store">
+  	<!-- ng-repeat: repeats for each item in an array -->
+    <div ng-repeat="product in store.products" class="product row">
+      <h3>
+        {{product.name}}
+        <em class="pull-right">${{product.price}}</em>
+      </h3>
+    </div>
+  </body>
+</html>
